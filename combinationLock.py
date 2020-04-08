@@ -32,7 +32,6 @@ def checkConditions(valueAsInt):
         print ("checkConditions: illegal input\r\n")
         return False
 
-    # returns True if the value fulfills all given criteria
     valueAsTuple = convertToTuple(valueAsInt)
     
     # 682: one digit is right and in its place
@@ -46,7 +45,6 @@ def checkConditions(valueAsInt):
     # 206: two digits are right but both are in the wrong place
     if(not condition(valueAsTuple, 206, 2, 0)):
         return False
-
     # 738: all digits are wrong
     if(not condition(valueAsTuple, 738, 0, 0)):
         return False
@@ -55,7 +53,7 @@ def checkConditions(valueAsInt):
     if(not condition(valueAsTuple, 380, 1, 0)):
         return False
 
-    #otherwise, we have found it!
+    #otherwise, we have found the answer!
     return True
 
 
